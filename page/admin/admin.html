@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>admin.com</title>
+</head>
+
+<body>
+    <div class="container-fluid" ng-app="myApp">
+        <div class="row flex-nowrap" ng-controller="myCtrl">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"><img
+                            src="/image/logo-mixi-tét.png" height="50px" width="90px" alt=""> Adminstator
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="/page/homepage.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Homepage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/page/admin/admin.html" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span
+                                    class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{use.avatar}}" alt="hugenerd" width="30" height="30"
+                                class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">{{use.name}}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" ng-click="SignOut()">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="row">
+                    <div class="control-panel">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <form style="width: 300px;" class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search" ng-model="keyword">
+                                    <button class="btn btn-outline-success" type="submit"
+                                        ng-click="search()">Search</button>
+                                </form>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i class="fas fa-plus"></i> New
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" style="width: 800px; margin: 0 auto; height: auto;">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="was-validated">
+                                                    <div class="mb-3">
+                                                        <label for="validationTextarea" class="form-label">Tên sản
+                                                            phẩm</label>
+                                                        <input class="form-control" type="text"
+                                                            placeholder="Vui lòng nhập tên sản phẩm" required
+                                                            ng-model="name">
+                                                        <div class="invalid-feedback">
+                                                            Tên sản phẩm không được để trống.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="validationTextarea" class="form-label">Giá niêm
+                                                            yết</label>
+                                                        <input class="form-control" type="number"
+                                                            placeholder="Vui lòng nhập giá niêm yết" required
+                                                            ng-model="price">
+                                                        <div class="invalid-feedback">
+                                                            Giá niêm yết không được để trống.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <select class="form-select" required aria-label="select example"
+                                                            ng-model="type">
+                                                            <option value="">Loại sản phẩm</option>
+                                                            <option value="ListAoMixi">Áo Mixi</option>
+                                                            <option value="ListAoRF">Áo Refundgaming</option>
+                                                            <option value="ListCocMixi">Cốc mixi</option>
+                                                            <option value="ListDoluuniem">Đồ lưu niệm</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">Vui lòng chọn loại sản phẩm
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="validationTextarea" class="form-label">Ảnh sản
+                                                            phẩm</label>
+                                                        <input type="file" class="form-control"
+                                                            aria-label="file example" required ng-model="image"
+                                                            custom-on-change="uploadFile">
+                                                        <div class="invalid-feedback">Chưa chọn Ảnh sản phẩm
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="validationTextarea" class="form-label">Ảnh slide
+                                                            sản phẩm</label>
+                                                        <input type="file" class="form-control"
+                                                            aria-label="file example" required ng-model="imgslide"
+                                                            multiple custom-on-change="uploadFiles">
+                                                        <div class="invalid-feedback">Chưa chọn Ảnh slide
+                                                            sản phẩm
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    ng-click="initdata()">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body" style="overflow: auto; height: 600px !important;">
+                                <div class="row">
+                                    <table class="table table-bordered text-center">
+                                        <thead>
+                                            <th scope="col"></th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Tên sản phẩm</th>
+                                            <th scope="col">Loại</th>
+                                            <th scope="col">Giá niêm yết</th>
+                                            <th scope="col">Tác vụ</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="col-auto" ng-repeat="n in NewProduct">
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    {{n.id}}
+                                                </td>
+                                                <td>
+                                                    {{n.name}}
+                                                </td>
+                                                <td>
+                                                    {{n.type}}
+                                                </td>
+                                                <td>
+                                                    {{n.price.toLocaleString('it-IT', {style : 'currency', currency :
+                                                    'VND'})}}
+                                                </td>
+                                                <td>
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop" class="btn btn-primary"
+                                                        ng-click="getModel(n)">
+                                                        <i class="fas fa-edit"></i></button>
+
+                                                    <button type="button" class="btn btn-danger" ng-click="delete(n)"><i
+                                                            class="fas fa-trash-alt"></i></button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="staticBackdrop"
+                                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="staticBackdropLabel">Sửa
+                                                                        thông tin sản phẩm</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body text-start">
+                                                                    <form class="was-validated">
+                                                                        <div class="mb-3">
+                                                                            <label for="validationTextarea"
+                                                                                class="form-label">Tên sản
+                                                                                phẩm</label>
+                                                                            <input class="form-control" type="text"
+                                                                                placeholder="{{n.name}}" required
+                                                                                ng-model="$parent.Newdata.name">
+                                                                            <div class="invalid-feedback">
+                                                                                Tên sản phẩm không được để trống.
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mb-3">
+                                                                            <label for="validationTextarea"
+                                                                                class="form-label">Giá niêm
+                                                                                yết</label>
+                                                                            <input class="form-control" type="number"
+                                                                                placeholder="{{n.price}}" required
+                                                                                ng-model="$parent.Newdata.price">
+                                                                            <div class="invalid-feedback">
+                                                                                Giá niêm yết không được để trống.
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mb-3">
+                                                                            <select class="form-select" required
+                                                                                aria-label="select example"
+                                                                                ng-model="$parent.Newdata.type">
+                                                                                <option value="">Loại sản phẩm</option>
+                                                                                <option value="ListAoMixi">Áo Mixi
+                                                                                </option>
+                                                                                <option value="ListAoRF">Áo Refundgaming
+                                                                                </option>
+                                                                                <option value="ListCocMixi">Cốc mixi
+                                                                                </option>
+                                                                                <option value="ListDoluuniem">Đồ lưu
+                                                                                    niệm</option>
+                                                                            </select>
+                                                                            <div class="invalid-feedback">Vui lòng chọn
+                                                                                loại sản phẩm
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="mb-3">
+                                                                            <input type="file" class="form-control"
+                                                                                aria-label="file example"
+                                                                                ng-model="$parent.Newdata.image"
+                                                                                multiple>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal"
+                                                                        ng-click="edit()">Update</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.directive('customOnChange', function () {
+            return {
+                restrict: 'A',
+                link: function (scope, element, attrs) {
+                    var onChangeHandler = scope.$eval(attrs.customOnChange);
+                    element.on('change', onChangeHandler);
+                    element.on('$destroy', function () {
+                        element.off();
+                    });
+
+                }
+            };
+        });
+        app.controller('myCtrl', function ($scope, $http, $rootScope, $timeout, $location) {
+            $http.get("http://localhost:3000/User").then(function (response) {
+                $scope.users = response.data;
+                $rootScope.use = $scope.users.find((us) => us.id == $location.path().split("/")[1]) 
+            });
+            
+            $http.get("http://localhost:3000/NewProduct").then(function (response) {
+                $scope.NewProduct = response.data;
+            });
+            $http.get("http://localhost:3000/ListAoMixi").then(function (response) {
+                $scope.ListAoMixi = response.data;
+            });
+            $http.get("http://localhost:3000/ListAoRF").then(function (response) {
+                $scope.ListAoRF = response.data;
+            });
+            $http.get("http://localhost:3000/ListCocMixi").then(function (response) {
+                $scope.ListCocMixi = response.data;
+            });
+            $http.get("http://localhost:3000/ListDoluuniem").then(function (response) {
+                $scope.ListDoluuniem = response.data;
+            });
+
+            $scope.initdata = function () {
+                var data = {
+                    id: eval("$scope." + $scope.type + "[$scope." + $scope.type + ".length - 1].id + 1"),
+                    name: $scope.name,
+                    price: $scope.price,
+                    image: $rootScope.file,
+                    imgslide: $rootScope.files
+                }
+                var dataAdmin = {
+                    id: $scope.NewProduct[$scope.NewProduct.length - 1].id + 1,
+                    name: $scope.name,
+                    type: $scope.type,
+                    price: $scope.price,
+                    image: $rootScope.file,
+                    imgslide: $rootScope.files
+                }
+                console.log(data)
+                $http.post("http://localhost:3000/" + $scope.type, data).then(function (response) {
+                    eval("$scope." + $scope.type).push(data);
+                    console.log(response);
+                    alert("Thêm thành công");
+                    window.location.reload();
+                    $http.post("http://localhost:3000/NewProduct", dataAdmin).then(function (response) {
+                        $scope.NewProduct.push(dataAdmin);
+                        console.log(response);
+                        window.location.reload();
+                    }, function (error) {
+                        console.log(error);
+                    });
+                }, function (error) {
+                    console.log(error);
+                    alert("Thêm thất bại");
+                });
+
+            }
+            $scope.uploadFiles = function (event) {
+                var files = event.target.files;
+                $rootScope.files = [];
+                angular.forEach(files, function (val, key) {
+                    $scope.files.push("/image/" + val.name)
+                })
+            };
+            $scope.uploadFile = function (event) {
+                var file = event.target.files[0];
+                $rootScope.file = "/image/" + file.name;
+
+            };
+            $scope.SignOut = function () {
+                window.location.href = "../admin/login.html";
+            }
+            $scope.delete = function (n) {
+                if (confirm("Bạn có chắc muốn xóa sản phẩm này không ?") == true) {
+                    $http.delete("http://localhost:3000/NewProduct/" + n.id).then(function (response) {
+                        console.log(response);
+                        alert("Xóa thành công");
+                    }, function (error) {
+                        console.log(error);
+                        alert("Xóa thất bại");
+                    });
+
+                    var findId = eval("$scope." + n.type).find((us) => us.name === n.name)
+                    $timeout(() => {
+                        $http.delete(("http://localhost:3000/" + n.type + "/") + findId.id).then(function (response) {
+                            console.log(response);
+                            window.location.reload();
+                        }, function (error) {
+                            console.log(error);
+                        });
+                    }, 1000)
+                }
+            }
+
+            $scope.getModel = function (n) {
+                $rootScope.Newdata = angular.copy(n);
+                console.log($rootScope.Newdata)
+                $scope.edit = function () {
+                    $http.put("http://localhost:3000/NewProduct/" + n.id, $scope.Newdata).then(function (response) {
+                        console.log(response);
+                        alert("Sửa thành công");
+                        window.location.reload();
+                        $scope.delete
+                    }, function (error) {
+                        console.log(error);
+                        alert("Sửa thất bại");
+                    });
+
+                    var findId = eval("$scope." + n.type).find((us) => us.name === n.name)
+                    $http.put(("http://localhost:3000/" + n.type + "/") + findId.id, $scope.Newdata).then(function (response) {
+                        console.log(response);
+                        window.location.reload();
+                    }, function (error) {
+                        console.log(error);
+                    });
+                }
+            }
+
+            $scope.search = function () {
+                if ($scope.keyword == "" || $scope.keyword == undefined) {
+                    $http.get("http://localhost:3000/NewProduct").then(function (response) {
+                        $scope.NewProduct = response.data;
+                    });
+
+                } else if ($scope.NewProduct.filter((us) => us.name.toUpperCase().includes($scope.keyword.toUpperCase()) || us.type.toUpperCase().includes($scope.keyword.toUpperCase()) || us.price.toString().includes($scope.keyword) || us.id.toString().includes($scope.keyword)).length == 0) {
+                    alert("Không tìm thấy sản phẩm");
+                    return;
+                } else {
+                    $scope.NewProduct = $scope.NewProduct.filter((us) => us.name.toUpperCase().includes($scope.keyword.toUpperCase()) || us.type.toUpperCase().includes($scope.keyword.toUpperCase()) || us.price.toString().includes($scope.keyword) || us.id.toString().includes($scope.keyword))
+                }
+            }
+
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

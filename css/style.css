@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+
+}
+
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navbar {
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(120, 120, 120, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.collapse .nav-item {
+    margin-left: 30px;
+    height: 50px;
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+    z-index: 1;
+}
+
+.collapse .nav-link {
+    border-bottom: 4px solid transparent;
+    transition: 0.2s;
+}
+
+.collapse .nav-link:hover {
+    border-bottom: 4px solid #007784;
+    color: #007784 !important;
+}
+
+.img-cover>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.best-seller .card {
+    border: none;
+}
+
+.best-seller .btn {
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 0%;
+    border: 2px solid black;
+}
+
+.best-seller .btn:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+.card-group .card {
+    border: none;
+    border-radius: 1%;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.video-bg {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.video-bg video {
+    object-fit: cover;
+    border: none !important;
+    border-radius: 0% !important;
+}
+
+.video-bg .card {
+    border: none !important;
+    border-radius: 0% !important;
+}
+
+.video-bg .card-img-overlay {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.video-bg .card-img-overlay .btn {
+    font-size: 0.8vw;
+    font-weight: bold;
+    border-radius: 0%;
+    border: 2px solid white;
+    width: 130px;
+    margin-right: 10px;
+}
+
+.video-bg .card-img-overlay #btn1:hover {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.video-bg .card-img-overlay #btn2:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.contact {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 120px;
+    transform: translate(-50%, -50%);
+}
+
+.contact li a {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.contact li a .icon {
+    position: relative;
+    color: #262626;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.contact li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.contact li a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.contact li a:hover:before {
+    top: 0;
+}
+
+.contact .fb a:before {
+    background: blue;
+}
+
+.contact .yt a:before {
+    background: #f00;
+}
+
+.contact .ins a:before {
+    background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(179, 0, 255) 50%, rgb(0, 4, 255) 100%);
+}
+
+.cart {
+    width: 150px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.cart:hover {
+    color: #007784;
+}
+
+.dropdown-menu {
+    margin-left: -400px;
+    margin-top: 10px;
+    border-radius: 0%;
+    box-shadow: 0px 0px 10px 0px rgba(120, 120, 120, 0.75);
+    height: 400px;
+    width: 1450px;
+    background-color: #f0ecde;
+}
+.dropdown-menu .content{
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.directory{
+    width: 25%;
+}
+.directory .list-group-item{
+    border: none;
+    font-size: medium;
+    font-weight: lighter;
+    color: black;
+    background-color: #f0ecde;
+    padding-left: 0.5em;
+    font-family: "Montserrat", sans-serif;
+}
+.directory .list-group .btn{
+    border: 2px solid #007784;
+    background-color: transparent;
+    color: #007784;
+    font-size: small;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 20px;
+}
+.directory .list-group .btn:hover{
+    background-color: #007784;
+    color: white;
+}
+.directory .list-group a {
+    color: black;
+}
+.directory .list-group a:hover{
+    color: #007784;
+}
+.dropdown-menu .content .card{
+    border: none;
+    border-radius: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #f0ecde;
+}
+.dropdown-menu .content .card img{
+    width: 100%;
+    height: 206px;
+    object-fit: cover;
+    border-radius: 0%;
+}
+.dropdown-menu .content .card img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.dropdown-menu .content .card .btn{
+    border: none;
+    background-color: transparent;
+    color: #007784;
+    font-size: small;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 20px;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popular-product .card img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.popular-product .card:hover{
+    box-shadow: 0px 0px 10px 0px rgba(120, 120, 120, 0.75);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.popular-product .card .card-title{
+    color: #007784;
+}
+.popular-product .card .card-text{
+    color: black;
+}
+.popular-product{
+    width: 95%;
+    margin: 0 auto;
+}

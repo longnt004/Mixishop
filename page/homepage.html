@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+        integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+        integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/directory.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>mixishop.com</title>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid p-0" ng-controller="myCtrl">
+        <nav class="navbar  navbar-expand-xl navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="/page/homepage.html"><img src="/image/logo-mixi-tét.png" height="80px" width="140px"
+                        alt=""></a>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav me-auto mb-2 mb-lg-0" id="myTab" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" aria-selected="true"
+                                href="#!home">Home</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" aria-selected="false"
+                                href="#">Thông báo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-selected="false">
+                                Danh mục sản phẩm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="content">
+                                    <div class="row row-collapse">
+                                        <div class="directory">
+                                            <ul class="list-group">
+                                                <h5 style="color: #007784; font-weight: bold; font-family: Montserrat, sans-serif"
+                                                    ;>Danh mục sản phẩm</h5>
+                                                <li class="list-group-item">
+
+                                                    <a href="#!directoryProduct"
+                                                        ng-click="getToListProduct(ListDoluuniem)">
+                                                        <i class="fas fa-angle-right"></i> Đồ lưu niệm Mixi
+                                                        <span class="badge bg-danger">HOT</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#!directoryProduct"
+                                                        ng-click="getToListProduct(ListAoMixi)">
+                                                        <i class="fas fa-angle-right"></i> Áo Mixi
+                                                        <span class="badge bg-info text-dark">NEW</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#!directoryProduct" ng-click="getToListProduct(ListAoRF)">
+                                                        <i class="fas fa-angle-right"></i> Áo Refund Gaming
+                                                        <span class="badge bg-success">POPULAR</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="#!directoryProduct"
+                                                        ng-click="getToListProduct(ListCocMixi)">
+                                                        <i class="fas fa-angle-right"></i> Cốc Mixi
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card " style="width: 25%; height: 100%; ">
+                                            <div style="overflow: hidden;">
+                                                <img src="/image/ln1.jpg" class="card-img-top" height="206px" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <a href="#" class="btn btn-primary">Xem thêm <i
+                                                        class="fas fa-angle-double-right"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card" style="width: 25%; height: 100%;">
+                                            <div style="overflow: hidden;">
+                                                <img src="/image/ln2.jpg" class="card-img-top" height="206px" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <a href="#" class="btn btn-primary">Xem thêm <i
+                                                        class="fas fa-angle-double-right"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card" style="width: 25%; height: 100%;">
+                                            <div style="overflow: hidden;">
+                                                <img src="/image/ln3.jpg" class="card-img-top" height="206px" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <a href="#" class="btn btn-primary">Xem thêm <i
+                                                        class="fas fa-angle-double-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <ul class="contact">
+                                <li class="fb"><a href="https://www.facebook.com/profile.php?id=100076687362461"><i
+                                            class="fab fa-facebook icon"></i></a></li>
+                                <li class="yt"><a href="https://www.youtube.com/@MixiGaming89"><i
+                                            class="fab fa-youtube icon"></i></a></li>
+                                <li class="ins"><a href="https://www.instagram.com/mixi.shop"><i
+                                            class="fab fa-instagram icon"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a class="cart" href="#!cart"> <i class="fas fa-shopping-cart icon"></i>
+                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
+                        ng-show="cart.length > 0">
+                        {{cart.length}}
+                    </span> Giỏ hàng </a>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">MixiShop</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    Mọi thắc mắc và góp ý cần hỗ trợ xin vui lòng liên hệ Fanpage, Youtube và Instagram.
+                </div>
+                <div class="dropdown mt-3">
+                    <ul class="contact mt-5">
+                        <ul class="contact">
+                            <li class="fb"><a href="https://www.facebook.com/profile.php?id=100076687362461"><i
+                                        class="fab fa-facebook icon"></i></a></li>
+                            <li class="yt"><a href="https://www.youtube.com/@MixiGaming89"><i
+                                        class="fab fa-youtube icon"></i></a></li>
+                            <li class="ins"><a href="https://www.instagram.com/mixi.shop"><i
+                                        class="fab fa-instagram icon"></i></a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ng-view></ng-view>
+
+
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+            <hr>
+            <section class="">
+                <div class="container text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>Về chúng tôi
+                            </h6>
+                            <p>
+                                Website chính thức và duy nhất của MixiShop. Hiện tại chúng mình chỉ nhận đơn hàng trên
+                                website chứ không nhận bất kỳ nơi nào khác nhé!
+                            </p>
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Danh mục sản phẩm
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Áo Mixi</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Áo Refund Gaming</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Đồ lưu niệm Mixi</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Thông tin
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Giới thiệu</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Chính sách bảo mật</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset" ng-click="window.scrollTo(0, 0);">Điều khoản</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
+                            <p><i class="fas fa-home me-3"></i>Mọi thắc mắc và góp ý cần hỗ trợ xin vui lòng liên hệ
+                                Fanpage và Instagram</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                mixishop@gmail.com
+                            </p>
+                            <div>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <Script>
+        var app = angular.module('myApp', ["ngRoute"]);
+        
+        app.controller('myCtrl', function ($scope, $http, $rootScope) {
+            $http.get("http://localhost:3000/Carouselpage1").then(function (response) {
+                $scope.Carouselpage1 = response.data;
+            });
+            $http.get("http://localhost:3000/Carouselpage2").then(function (response) {
+                $scope.Carouselpage2 = response.data;
+            });
+            $http.get("http://localhost:3000/Popular-product").then(function (response) {
+                $scope.Popularproduct = response.data;
+            });
+            $http.get("http://localhost:3000/ListAoMixi").then(function (response) {
+                $scope.ListAoMixi = response.data;
+            });
+            $http.get("http://localhost:3000/ListAoRF").then(function (response) {
+                $scope.ListAoRF = response.data;
+            });
+            $http.get("http://localhost:3000/ListDoluuniem").then(function (response) {
+                $scope.ListDoluuniem = response.data;
+            });
+            $http.get("http://localhost:3000/ListCocMixi").then(function (response) {
+                $scope.ListCocMixi = response.data;
+            });
+            $http.get("http://localhost:3000/Bill").then(function (response) {
+                $scope.Bill = response.data;
+            });
+
+            $scope.getDataProduct = function (p) {
+                $rootScope.product = p;
+                // console.log($scope.product)
+            }
+            $scope.showProduct = function (data) {
+                $rootScope.product = data;
+            }
+            $scope.getProdInDirec = function (a) {
+                $rootScope.product = a;
+                console.log($scope.product)
+            }
+
+            $scope.addtocart = function (product) {
+                if ($rootScope.cart === undefined || $rootScope.cart.length == 0) {
+                    $rootScope.cart = [];
+                    $rootScope.cart.push(product);
+                }else if( $rootScope.cart.length > 0){
+                    var check = false;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        if ($rootScope.cart[i].id == product.id) {
+                            $rootScope.cart[i].quantity += product.quantity;
+                            check = true;
+                            break;
+                        }
+                    }
+                    if (!check) {
+                        $rootScope.cart.push(product);
+                    }
+                }
+                
+                console.log($rootScope.cart)
+            }
+
+            $scope.getToListProduct = function (lP) {
+                $scope.listProduct = lP;
+            }
+
+            $scope.remove = function (index) {
+                $rootScope.cart.splice(index, 1);
+            }
+
+            $scope.total = function () {
+                var total = 0;
+                angular.forEach($rootScope.cart, function (value) {
+                    total += value.price * value.quantity;
+                })
+                return total;
+            }
+
+            $scope.initBill = function () {
+                var bill = {
+                    name: $scope.fullname,
+                    phone: $scope.numberphone,
+                    address: $scope.address,
+                    city: $scope.city,
+                    note: $scope.note,
+                    email: $scope.email,
+                    cart: $rootScope.cart, 
+                    total: $scope.total()
+                }
+                $http.post("http://localhost:3000/Bill", bill).then(function (response) {
+                    $scope.Bill = response.data;
+                });
+                console.log(bill)
+            }
+        });
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/home", {
+                    templateUrl: "./main-content.html"
+                })
+                .when("/cart", {
+                    templateUrl: "./cart.html"
+                })
+                .when("/formpaying", {
+                    templateUrl: "./formpaying.html"
+                })
+                .when("/ProductDetail", {
+                    templateUrl: "../page/product/ProductDetail.html"
+                })
+                .when("/directoryProduct", {
+                    templateUrl: "../page/direc/directoryProduct.html",
+                    controller: "myDirecCtrl"
+                })
+                .otherwise({
+                    redirectTo: "/home"
+                });
+
+        });
+    </Script>
+    <script src="/js/direc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+</body>
+
+</html>

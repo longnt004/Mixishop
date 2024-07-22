@@ -1,0 +1,66 @@
+<div class="main-content col-lg-12">
+    <div class="prod-name">
+        <h3>ÁO PHÔNG MIXI</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">HOME</a></li>
+                <li class="breadcrumb-item active" aria-current="page">ÁO MIXI</li>
+            </ol>
+        </nav>
+    </div>
+
+
+
+    <div class="row m-0">
+        <div class="sidebar col-lg-4">
+            <div class="row">
+                <div class="find-price">
+                    <label for="customRange2" class="lb-price">LỌC SẢN PHẨM</label>
+                    <select name="" id="" ng-model="$parent.sortBy">
+                        <option value="">Lọc theo tên</option>
+                        <option value="price">Lọc theo giá</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="direc-product">
+                <ul class="list-group">
+                    <h5 style="color: black; font-weight: bold; font-family: Montserrat, sans-serif" ;>Danh mục sản phẩm
+                    </h5>
+                    <li class="list-group-item">
+                        <a href="#!directoryProduct" ng-click="getToListProduct(ListDoluuniem)">ĐỒ LƯU NIỆM MIXI <span class="badge bg-danger">HOT</span></a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#!directoryProduct" ng-click="getToListProduct(ListAoMixi)">ÁO MIXI</a>
+                        <span class="badge bg-info text-dark">NEW</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#!directoryProduct" ng-click="getToListProduct(ListAoRF)">ÁO REFUND GAMING</a>
+                        <span class="badge bg-success">POPULAR</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#!directoryProduct" ng-click="getToListProduct(ListCocMixi)">CỐC MIXI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="content col-lg-8">
+            <div class="card-group text-center">
+                <div class="row w-100 m-0 g-2">
+                    <a class="card col-lg-4 col-md-8 m-0" href="#!ProductDetail" ng-repeat="a in listProduct | orderBy: sortBy" ng-click="getProdInDirec(a)">
+                        <div style="overflow: hidden;">
+                            <img class="card-img-top" src="{{a.image}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <strong class="card-title">{{a.name}}</strong>
+                            <p class="card-text">{{a.price.toLocaleString('it-IT', {style : 'currency', currency :
+                                'VND'})}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

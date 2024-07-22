@@ -1,0 +1,98 @@
+!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <title>Title</title>
+</head>
+
+<body style="background-image: url(/image/ví-mixi.jpg);
+background-size: cover;
+background-repeat: no-repeat;">
+    <div class="container" style="width: 100%;
+    height: 100%;
+    color: white;">
+        <div class="row">
+            <section class="vh-100">
+                <div class="container-fluid" ng-controller="myCtrl">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-md-9 col-lg-6 col-xl-5">
+                            <img src="/image/logo-mixi-tét.png" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                            <h1>Sign in</h1>
+                            <form>
+                                <div class="form-group mb-4">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" placeholder="Enter a mail address"
+                                        ng-model="email" />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter password"
+                                        ng-model="password" />
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="form-check mb-0">
+                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                            id="form2Example3" />
+                                        <label class="form-check-label" for="form2Example3">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#!" class="text-body">Forgot password?</a>
+                                </div>
+
+                                <div class="text-center text-lg-start mt-4 pt-2">
+                                    <button type="button" class="btn btn-primary btn-lg"
+                                        style="padding-left: 2.5rem; padding-right: 2.5rem;"
+                                        ng-click="login()">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http.get("http://localhost:3000/User").then(function (response) {
+                $scope.users = response.data;
+            });
+
+            $scope.login = function () {
+                var email = $scope.email;
+                var password = $scope.password;
+                var check = false;
+                for (var i = 0; i < $scope.users.length; i++) {
+                    if (email == $scope.users[i].email && password == $scope.users[i].password) {
+                        check = true;
+                        $scope.user = $scope.users[i];
+                        console.log($scope.user)
+                        break;
+                    }
+                }
+                if (check == true) {
+                    alert("Đăng nhập thành công");
+                    window.location.href = "../admin/admin.html#!/"+$scope.user.id;
+                } else {
+                    alert("Đăng nhập thất bại");
+                }
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

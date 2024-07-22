@@ -1,0 +1,746 @@
+{
+  "Carouselpage1": [
+    {
+      "id": 1,
+      "name": "Áo Slogan Mixigaming 2024",
+      "price": 250000,
+      "image": "/image/ao1.jpg",
+      "imgsize": "/image/size2.jpg",
+      "review": 4200,
+      "imgslide": [
+        "/image/slg1.jpg",
+        "/image/slg2.jpg",
+        "/image/slg3.jpg",
+        "/image/slg4.jpg",
+        "/image/slg5.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cốc Mixi 1200ml",
+      "price": 250000,
+      "image": "/image/binh.jpg",
+      "review": 12200,
+      "imgslide": [
+        "/image/coc1.jpg",
+        "/image/coc2.jpg",
+        "/image/coc3.jpg",
+        "/image/coc4.jpg",
+        "/image/coc5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Áo phông Mixi",
+      "price": 220000,
+      "image": "/image/ao4.jpg",
+      "imgsize": "/image/size-ao-phong.jpg",
+      "review": 1200,
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ví Mixi",
+      "price": 1200000,
+      "image": "/image/ví-mixi-300x400.jpg",
+      "review": 5000,
+      "imgslide": [
+        "/image/ví-mixi.jpg",
+        "/image/ví-mixi-2.jpg",
+        "/image/ví-mixi-3.jpg",
+        "/image/ví-mixi-4.jpg",
+        "/image/ví-mixi-5.jpg"
+      ]
+    }
+  ],
+  "Carouselpage2": [
+    {
+      "id": 5,
+      "name": "Áo nỉ dài tay Mixi",
+      "price": 350000,
+      "image": "/image/ao5.jpg",
+      "imgslide": [
+        "/image/ao5.jpg",
+        "/image/aoni2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Áo Hoodie Mixi",
+      "price": 500000,
+      "image": "/image/ao6.jpg",
+      "imgsize": "/image/size-hoodie.jpg",
+      "review": 35000,
+      "imgslide": [
+        "/image/hd1.jpg",
+        "/image/hd2.jpg",
+        "/image/hd3.jpg",
+        "/image/hd4.jpg",
+        "/image/hd5.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Áo phông MXG",
+      "price": 250000,
+      "image": "/image/ao7.jpg",
+      "imgslide": [
+        "/image/ao7.jpg",
+        "/image/aomxg2.jpg",
+        "/image/aomxg3.jpg",
+        "/image/aomxg4.jpg",
+        "/image/aomxg5.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Áo nỉ dài tay MixiCity",
+      "price": 350000,
+      "image": "/image/ao8.jpg",
+      "review": 1200,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao8.jpg"
+      ]
+    }
+  ],
+  "Popular-product": [
+    {
+      "id": 1,
+      "name": "Áo Slogan Mixigaming 2024",
+      "price": 250000,
+      "image": "/image/ao1.jpg",
+      "imgsize": "/image/size2.jpg",
+      "review": 4200,
+      "imgslide": [
+        "/image/slg1.jpg",
+        "/image/slg2.jpg",
+        "/image/slg3.jpg",
+        "/image/slg4.jpg",
+        "/image/slg5.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cốc Mixi 1200ml",
+      "price": 250000,
+      "image": "/image/binh.jpg",
+      "review": 12200,
+      "imgslide": [
+        "/image/coc1.jpg",
+        "/image/coc2.jpg",
+        "/image/coc3.jpg",
+        "/image/coc4.jpg",
+        "/image/coc5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Áo phông Mixi",
+      "price": 220000,
+      "image": "/image/ao4.jpg",
+      "imgsize": "/image/size-ao-phong.jpg",
+      "review": 1200,
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ví Mixi",
+      "price": 1200000,
+      "image": "/image/ví-mixi-300x400.jpg",
+      "review": 5000,
+      "imgslide": [
+        "/image/ví-mixi.jpg",
+        "/image/ví-mixi-2.jpg",
+        "/image/ví-mixi-3.jpg",
+        "/image/ví-mixi-4.jpg",
+        "/image/ví-mixi-5.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Áo nỉ dài tay Mixi",
+      "price": 350000,
+      "image": "/image/ao5.jpg",
+      "imgslide": [
+        "/image/ao5.jpg",
+        "/image/aoni2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Áo Hoodie Mixi",
+      "price": 500000,
+      "image": "/image/ao6.jpg",
+      "imgsize": "/image/size-hoodie.jpg",
+      "review": 35000,
+      "imgslide": [
+        "/image/hd1.jpg",
+        "/image/hd2.jpg",
+        "/image/hd3.jpg",
+        "/image/hd4.jpg",
+        "/image/hd5.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Áo phông MXG",
+      "price": 250000,
+      "image": "/image/ao7.jpg",
+      "imgslide": [
+        "/image/ao7.jpg",
+        "/image/aomxg2.jpg",
+        "/image/aomxg3.jpg",
+        "/image/aomxg4.jpg",
+        "/image/aomxg5.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Áo nỉ dài tay MixiCity",
+      "price": 350000,
+      "image": "/image/ao8.jpg",
+      "review": 1200,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao8.jpg"
+      ]
+    }
+  ],
+  "ListAoMixi": [
+    {
+      "id": 2,
+      "name": "Áo phông Mixi",
+      "price": 220000,
+      "image": "/image/ao4.jpg",
+      "imgsize": "/image/size-ao-phong.jpg",
+      "review": 1200,
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Áo nỉ dài tay Mixi",
+      "price": 350000,
+      "image": "/image/ao5.jpg",
+      "review": 1200,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao5.jpg",
+        "/image/aoni2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Áo Hoodie Mixi",
+      "price": 500000,
+      "image": "/image/ao6.jpg",
+      "imgsize": "/image/sizehd.jpg",
+      "review": 35000,
+      "imgslide": [
+        "/image/hd1.jpg",
+        "/image/hd2.jpg",
+        "/image/hd3.jpg",
+        "/image/hd4.jpg",
+        "/image/hd5.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Áo phông MXG",
+      "price": 250000,
+      "image": "/image/ao7.jpg",
+      "review": 7700,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao7.jpg",
+        "/image/aomxg2.jpg",
+        "/image/aomxg3.jpg",
+        "/image/aomxg4.jpg",
+        "/image/aomxg5.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Áo nỉ dài tay MixiCity",
+      "price": 350000,
+      "image": "/image/ao8.jpg",
+      "review": 1200,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao8.jpg"
+      ]
+    }
+  ],
+  "ListCocMixi": [
+    {
+      "id": 1,
+      "name": "Cốc Mixi 1200ml",
+      "price": 250000,
+      "image": "/image/binh.jpg",
+      "review": 12200,
+      "imgslide": [
+        "/image/coc1.jpg",
+        "/image/coc2.jpg",
+        "/image/coc3.jpg",
+        "/image/coc4.jpg",
+        "/image/coc5.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bình giữ nhiệt Mixi",
+      "price": 200000,
+      "image": "/image/gn1.jpg",
+      "review": 38000,
+      "imgslide": [
+        "/image/gn1.jpg",
+        "/image/gn2.jpg",
+        "/image/gn3.jpg",
+        "/image/gn4.jpg",
+        "/image/gn5.jpg",
+        "/image/gn6.jpg",
+        "/image/gn7.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bình Giữ Nhiệt Fan Cứng Mixi",
+      "price": 170000,
+      "image": "/image/fc1.jpg",
+      "review": 22000,
+      "imgslide": [
+        "/image/fc1.jpg",
+        "/image/fc2.jpg",
+        "/image/fc3.jpg",
+        "/image/fc4.jpg",
+        "/image/fc5.jpg"
+      ]
+    }
+  ],
+  "ListAoRF": [
+    {
+      "id": 1,
+      "name": "Áo Refund Gaming 2021",
+      "price": 250000,
+      "image": "/image/ÁO-REFUND-GAMING.png",
+      "review": 7700,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ÁO-REFUND-GAMING.png"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bình giữ nhiệt Mixi",
+      "price": 200000,
+      "type": "ListAoRF",
+      "image": "/image/gn1.jpg",
+      "review": 38000,
+      "imgslide": [
+        "/image/gn1.jpg",
+        "/image/gn2.jpg",
+        "/image/gn3.jpg",
+        "/image/gn4.jpg",
+        "/image/gn5.jpg",
+        "/image/gn6.jpg",
+        "/image/gn7.jpg"
+      ]
+    }
+  ],
+  "ListDoluuniem": [
+    {
+      "id": 1,
+      "name": "Ví Mixi",
+      "price": 1200000,
+      "image": "/image/ví-mixi-300x400.jpg",
+      "review": 5000,
+      "imgslide": [
+        "/image/ví-mixi.jpg",
+        "/image/ví-mixi-2.jpg",
+        "/image/ví-mixi-3.jpg",
+        "/image/ví-mixi-4.jpg",
+        "/image/ví-mixi-5.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bộ Ghép Hình Mixi",
+      "price": 399000,
+      "image": "/image/bl1.jpg",
+      "review": 9000,
+      "imgslide": [
+        "/image/bl1.jpg",
+        "/image/bl2.jpg",
+        "/image/bl3.jpg",
+        "/image/bl4.jpg",
+        "/image/bl5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pad chuột Mixigaming",
+      "price": 200000,
+      "image": "/image/pc-300x400.jpg",
+      "imgslide": [
+        "/image/pc1.jpg",
+        "/image/pc2.jpg",
+        "/image/pc3.jpg",
+        "/image/pc4.jpg",
+        "/image/pc5.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Áo mixi",
+      "price": 300000,
+      "image": "/image/a1.jpg",
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "name": "Nguyễn Long",
+      "email": "long@gmail.com",
+      "password": "123456",
+      "avatar": "/image/long.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Yến Nhi",
+      "email": "nhi@gmail.com",
+      "password": "123456",
+      "avatar": "/image/nhi.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Nam",
+      "email": "nam@gmail.com",
+      "password": "123456",
+      "avatar": "/image/nam.jpg"
+    }
+  ],
+  "NewProduct": [
+    {
+      "id": 2,
+      "name": "Cốc Mixi 1200ml",
+      "price": 250000,
+      "type": "ListCocMixi",
+      "image": "/image/binh.jpg",
+      "review": 12200,
+      "imgslide": [
+        "/image/coc1.jpg",
+        "/image/coc2.jpg",
+        "/image/coc3.jpg",
+        "/image/coc4.jpg",
+        "/image/coc5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Áo phông Mixi",
+      "price": 220000,
+      "image": "/image/ao4.jpg",
+      "type": "ListAoMixi",
+      "imgsize": "/image/size-ao-phong.jpg",
+      "review": 1200,
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ví Mixi",
+      "price": 1200000,
+      "type": "ListDoluuniem",
+      "image": "/image/ví-mixi-300x400.jpg",
+      "review": 5000,
+      "imgslide": [
+        "/image/ví-mixi.jpg",
+        "/image/ví-mixi-2.jpg",
+        "/image/ví-mixi-3.jpg",
+        "/image/ví-mixi-4.jpg",
+        "/image/ví-mixi-5.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Áo nỉ dài tay Mixi",
+      "price": 350000,
+      "type": "ListAoMixi",
+      "image": "/image/ao5.jpg",
+      "imgslide": [
+        "/image/ao5.jpg",
+        "/image/aoni2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Áo Hoodie Mixi",
+      "price": 500000,
+      "image": "/image/ao6.jpg",
+      "type": "ListAoMixi",
+      "imgsize": "/image/size-hoodie.jpg",
+      "review": 35000,
+      "imgslide": [
+        "/image/hd1.jpg",
+        "/image/hd2.jpg",
+        "/image/hd3.jpg",
+        "/image/hd4.jpg",
+        "/image/hd5.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Áo phông MXG",
+      "price": 250000,
+      "type": "ListAoMixi",
+      "image": "/image/ao7.jpg",
+      "imgslide": [
+        "/image/ao7.jpg",
+        "/image/aomxg2.jpg",
+        "/image/aomxg3.jpg",
+        "/image/aomxg4.jpg",
+        "/image/aomxg5.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Áo nỉ dài tay MixiCity",
+      "price": 350000,
+      "image": "/image/ao8.jpg",
+      "type": "ListAoMixi",
+      "review": 1200,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ao8.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bộ Ghép Hình Mixi",
+      "price": 399000,
+      "type": "ListDoluuniem",
+      "image": "/image/bl1.jpg",
+      "review": 9000,
+      "imgslide": [
+        "/image/bl1.jpg",
+        "/image/bl2.jpg",
+        "/image/bl3.jpg",
+        "/image/bl4.jpg",
+        "/image/bl5.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Áo Refund Gaming 2021",
+      "price": 250000,
+      "type": "ListAoRF",
+      "image": "/image/ÁO-REFUND-GAMING.png",
+      "review": 7700,
+      "imgsize": "/image/size-ao-phong.jpg",
+      "imgslide": [
+        "/image/ÁO-REFUND-GAMING.png"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bình giữ nhiệt Mixi",
+      "price": 200000,
+      "type": "ListDoluuniem",
+      "image": "/image/gn1.jpg",
+      "review": 38000,
+      "imgslide": [
+        "/image/gn1.jpg",
+        "/image/gn2.jpg",
+        "/image/gn3.jpg",
+        "/image/gn4.jpg",
+        "/image/gn5.jpg",
+        "/image/gn6.jpg",
+        "/image/gn7.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Bình Giữ Nhiệt Fan Cứng Mixi",
+      "price": 170000,
+      "type": "ListCocMixi",
+      "image": "/image/fc1.jpg",
+      "review": 22000,
+      "imgslide": [
+        "/image/fc1.jpg",
+        "/image/fc2.jpg",
+        "/image/fc3.jpg",
+        "/image/fc4.jpg",
+        "/image/fc5.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Pad chuột Mixigaming",
+      "type": "ListDoluuniem",
+      "price": 200000,
+      "image": "/image/pc-300x400.jpg",
+      "imgslide": [
+        "/image/pc1.jpg",
+        "/image/pc2.jpg",
+        "/image/pc3.jpg",
+        "/image/pc4.jpg",
+        "/image/pc5.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Áo mixi",
+      "type": "ListDoluuniem",
+      "price": 300000,
+      "image": "/image/a1.jpg",
+      "imgslide": [
+        "/image/a1.jpg",
+        "/image/a2.jpg",
+        "/image/a3.jpg",
+        "/image/a4.jpg"
+      ]
+    }
+  ],
+  "Bill": [
+    {
+      "name": "long",
+      "phone": "0987654321",
+      "address": "0987654321",
+      "city": "TP HCM",
+      "note": "abc",
+      "email": "long@gmail.com",
+      "cart": [
+        {
+          "id": 2,
+          "name": "Cốc Mixi 1200ml",
+          "price": 250000,
+          "image": "/image/binh.jpg",
+          "review": 12200,
+          "imgslide": [
+            "/image/coc1.jpg",
+            "/image/coc2.jpg",
+            "/image/coc3.jpg",
+            "/image/coc4.jpg",
+            "/image/coc5.jpg"
+          ],
+          "quantity": 2,
+          "size": "L",
+          "color": "ĐEN"
+        },
+        {
+          "id": 2,
+          "name": "Áo Mixi",
+          "price": 250000,
+          "image": "/image/binh.jpg",
+          "review": 12200,
+          "imgslide": [
+            "/image/coc1.jpg",
+            "/image/coc2.jpg",
+            "/image/coc3.jpg",
+            "/image/coc4.jpg",
+            "/image/coc5.jpg"
+          ],
+          "quantity": 2,
+          "size": "L",
+          "color": "ĐEN"
+        }
+      ],
+      "total": 500000,
+      "id": 1
+    }
+  ],
+
+  "Menu1": [
+    {
+      "id":1,
+      "name":"Áo Mixi",
+      "price":250000,
+      "sale": 230000,
+      "image":"/image/ao1.jpg",
+      "badge": "30%"
+    },
+    {
+      "id":2,
+      "name":"Áo Slogan Mixigaming 2024",
+      "price":250000,
+      "sale": 220000,
+      "image":"/image/ao2.jpg",
+      "badge": "20%"
+    },
+    {
+      "id":3,
+      "name":"Áo phông Mixi",
+      "price":250000,
+      "sale": 210000,
+      "image":"/image/ao3.jpg",
+      "badge": "10%"
+    },
+    {
+      "id":4,
+      "name":"Áo nỉ dài tay Mixi",
+      "price":250000,
+      "sale": 220000,
+      "image":"/image/ao4.jpg",
+      "badge": "20%"
+    },
+    {
+      "id":5,
+      "name":"Áo Hoodie Mixi",
+      "price":270000,
+      "sale": 250000,
+      "image":"/image/ao5.jpg",
+      "badge": "20%"
+    },
+    {
+      "id":6,
+      "name":"Áo phông MXG",
+      "price":350000,
+      "sale": 300000,
+      "image":"/image/ao6.jpg",
+      "badge": "20%"
+    },
+    {
+      "id":7,
+      "name":"Áo nỉ dài tay MixiCity",
+      "price":200000,
+      "sale": 180000,
+      "image":"/image/ao7.jpg",
+      "badge": "30%"
+    },
+    {
+      "id":8,
+      "name":"Áo Refund Gaming 2021",
+      "price":250000,
+      "sale": 230000,
+      "image":"/image/ao8.jpg",
+      "badge": "30%"
+    }
+  ]
+
+  
+}

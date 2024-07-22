@@ -1,0 +1,50 @@
+<nav>
+    <div class="img-cover">
+        <img src="/image/Ảnh-bia-mixishop-1-2048x779.jpg" alt="">
+    </div>
+</nav>
+<div class="main-content" >
+    <div class="best-seller">
+        <div class="card text-center">
+            <div class="card-body">
+                <h1 class="card-title">BÁN CHẠY NHẤT</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popular-product">
+        <div class="card-group text-center">
+            <div class="row w-100 m-0 g-2">
+                <a class="card col-lg-3 col-md-6" href="#!ProductDetail" ng-repeat="p in Popularproduct" ng-click="getDataProduct(p)">
+                    <div style="overflow: hidden;">
+                        <img class="card-img-top"  src="{{p.image}}"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <strong class="card-title">{{p.name}}</strong>
+                        <p class="card-text">{{p.price.toLocaleString('it-IT', {style : 'currency', currency :
+                            'VND'})}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0" >
+        <div class="col-inner">
+            <div class="video-bg">
+                <div class="card bg-dark text-white">
+                    <video class="card-img" src="/image/video-1598728053.mp4" height="350px" width="100%"
+                        autoplay loop muted></video>
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">MixiShop</h4>
+                        <p class="card-text">Cập nhật thông tin về sản phẩm mới</p>
+                        <a href="#" class="btn bg-white btn-primary text-black" id="btn1">FANPAGE</a>
+                        <a href="#" class="btn bg-transparent btn-primary text-white" id="btn2">INSTAGRAM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

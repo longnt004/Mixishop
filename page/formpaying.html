@@ -1,0 +1,141 @@
+<div class="main-content mt-5">
+    <div class="row col-12 m-0">
+        <div class="form-paying col-7">
+            <form class="row g-3 needs-validation" novalidate>
+                <h4>THÔNG TIN THANH TOÁN</h4>
+                <div class="form-group">
+                    <label for="validationCustom01" class="form-label">Họ và tên</label>
+                    <input type="text" class="form-control" id="validationCustom01" required ng-model="$parent.fullname">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Số điện thoại</label>
+                    <input type="text" class="form-control" id="validationCustom02" required ng-model="$parent.numberphone">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustomUsername" class="form-label">Địa chỉ email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" required ng-model="$parent.email">
+                        <div class="invalid-feedback">
+                            Error email !
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Tỉnh/Thành phố</label>
+                    <select class="form-select" id="validationCustom04" required ng-model="$parent.city">
+                        <option selected disabled value="Hà Nội">Hà Nội</option>
+                        <option value="TP HCM">TP HCM</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Địa chỉ nhà</label>
+                    <input type="text" class="form-control" id="validationCustom02" required ng-model="$parent.address">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom02" class="form-label">Ghi chú</label>
+                    <textarea name="" id="" class="form-control" cols="30" rows="5" ng-model="$parent.note"></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Tôi đã đọc và đồng ý với điều khoản và điều kiện của website
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="initBill()">
+                        ĐẶT HÀNG
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">MIXISHOP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        - Cảm ơn bạn đã mua hàng tại MixiShop !<br>
+                        - Đơn hàng của bạn đã được ghi nhận và đang được xử lý. <br>
+                        - Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất để xác nhận đơn hàng. <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order col-12 col-lg-5">
+            <div class="row m-0 mt-3">
+                <h4 class="">ĐƠN HÀNG CỦA BẠN</h4>
+                <table class="donhang">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sản phẩm</th>
+                            <th scope="col">Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="prod in cart">
+                            <td>
+                                <div class="name">
+                                    <span class="name" >{{prod.name}}</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="size">Size: {{prod.size}} |</span>
+                                    <span class="color">Màu: {{prod.color}} |</span>
+                                    <span class="quantity">Số lượng: {{prod.quantity}}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price">
+                                    <span class="price">{{(prod.price * prod.quantity).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}}</span>
+                                </div>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <div class="total">
+                                    <span class="total">Tổng cộng</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="total-price">
+                                    <span class="total-price">{{total().toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}}</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <strong class="alert">
+                    Hoá đơn chưa kèm phí ship (Quý khách thanh toán bằng tiền mặt hoặc chuyển khoản theo yêu cầu
+                    với đơn hàng của shop). Quý khách vui lòng kiểm tra kỹ thông tin đơn hàng trước khi xác nhận
+                    đặt hàng.
+                </strong>
+            </div>
+        </div>
+    </div>
+</div>
